@@ -166,6 +166,10 @@ label {
   transition: all 0.5s;
   cursor: pointer;
   font-size: 15px;
+
+  a {
+    color: $white;
+  }
 }
 
 .button:hover {
@@ -333,6 +337,67 @@ nav {
 
 //
 // email-form
+//
+
+//
+// About Start
+//
+
+.wrapper-about {
+  // padding: 0 20px;
+  margin: 0 auto;
+}
+
+.wrapper-about section {
+  padding: 20px 0;
+  h2 {
+    text-align: center;
+  }
+
+  svg {
+    width: 10%;
+    display: block;
+    margin: 10px;
+
+    @include mobile {
+      width: 20%;
+    }
+  }
+
+  #apollo {
+    width: 20%;
+  }
+  #graphql {
+    width: 20%;
+    height: 20%;
+  }
+}
+
+#profile-image {
+  width: 25%;
+  height: 25%;
+  margin-right: 7%;
+  border-radius: 20%;
+}
+
+section.about-me1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.svg-container {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-wrap: wrap;
+  @include mobile {
+    justify-content: space-evenly;
+  }
+}
+
+//
+// About End
 //
 
 .posts > .post {
