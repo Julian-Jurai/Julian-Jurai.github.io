@@ -378,11 +378,15 @@ nav {
   height: 25%;
   margin-right: 7%;
   border-radius: 20%;
+
+  @include mobile {
+    width: 15%;
+  }
 }
 
 section.about-me1 {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
