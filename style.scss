@@ -396,6 +396,18 @@ section.about-me1 {
   }
 }
 
+#map {
+  filter: grayscale(100%);
+
+  .iframe-pending {
+    display: none;
+  }
+
+  .iframe-loaded {
+    display: block;
+  }
+}
+
 //
 // About End
 //
