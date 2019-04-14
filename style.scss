@@ -75,12 +75,12 @@ p {
 }
 
 a {
-  color: $darkerGray;
+  color: $gray;
   text-decoration: none;
   cursor: pointer;
   &:hover,
   &:active {
-    color: $lightGray;
+    color: $lighterGray;
   }
 }
 
@@ -121,6 +121,55 @@ b {
 
 img {
   max-width: 100%;
+}
+
+input,
+textarea {
+  border-radius: 3px;
+  border: 1px solid $lighterGray;
+  box-sizing: border-box;
+  font-size: 15px;
+  padding: 5px;
+  transition: border-color 0.5s ease-out;
+  line-height: 2;
+}
+
+input:required,
+textarea:required {
+  border-left: 3px solid;
+  border-left-color: $green;
+}
+
+input:required:invalid,
+textarea:required:invalid {
+  border-left-color: $red;
+}
+
+::placeholder {
+  color: $lightGray;
+}
+
+label {
+  color: $gray;
+}
+
+.button {
+  display: block;
+  margin: auto;
+  border-radius: 4px;
+  background-color: $darkGray;
+  border: none;
+  color: $white;
+  text-align: center;
+  padding: 10px;
+  width: auto;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.button:hover {
+  opacity: 0.8;
 }
 
 // Fixes images in popup boxes from Google Translate
@@ -176,7 +225,7 @@ img {
   text-align: center;
   letter-spacing: 2px;
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid $lighterGray;
   font-family: $helvetica;
 }
 
@@ -261,6 +310,30 @@ nav {
   }
 }
 
+//
+// email-form
+//
+
+.wrapper-email-form {
+  textarea,
+  input {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  #name {
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      width: 49%;
+    }
+  }
+}
+
+//
+// email-form
+//
 
 .posts > .post {
   margin-bottom: 2em;
@@ -302,7 +375,7 @@ nav {
 
 .wrapper-footer {
   margin-top: 3em;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid $lighterGray;
 }
 
 footer {
