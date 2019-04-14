@@ -38,11 +38,12 @@ h5,
 h6 {
   font-family: $helvetica;
   color: $darkerGray;
-  font-weight: bold;
-
-  line-height: 1.7;
   margin: 1em 0 15px;
   padding: 0;
+  line-height: 1.3em;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0px;
 
   @include mobile {
     line-height: 1.4;
@@ -50,7 +51,7 @@ h6 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 28px;
   a {
     color: inherit;
   }
@@ -74,12 +75,12 @@ p {
 }
 
 a {
-  color: $blue;
+  color: $darkerGray;
   text-decoration: none;
   cursor: pointer;
   &:hover,
   &:active {
-    color: $blue;
+    color: $lightGray;
   }
 }
 
@@ -128,8 +129,13 @@ img {
 }
 
 .date {
-  font-style: italic;
-  color: $gray;
+  color: $lightGray;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.6em;
+  text-transform: capitalize;
 }
 
 // Specify the color of the selection
@@ -163,7 +169,7 @@ img {
 //
 
 .wrapper-masthead {
-  margin-bottom: 50px;
+  margin-bottom: 2em;
 }
 
 .masthead {
@@ -200,8 +206,8 @@ img {
 }
 
 .site-name {
-  margin: 0;
-  color: $black;
+  margin: 0.5em;
+  color: $darkerGray;
   cursor: pointer;
   font-weight: 700;
   font-size: 42px;
@@ -218,51 +224,59 @@ img {
 }
 
 nav {
-  margin-top: 23px; // @TODO: Vertically middle align
+  margin-top: 23px;
   font-family: $helvetica;
-  font-size: 18px;
+  font-size: 0.75em;
+  text-align: center;
 
   @include mobile {
     float: none;
     margin-top: 9px;
     display: block;
-    font-size: 16px;
   }
 
   a {
-    color: $darkGray;
-    text-align: right;
-    font-weight: 300;
-    letter-spacing: 1px;
+    color: $gray;
+    font-weight: 400;
 
     @include mobile {
       margin: 0 10px;
-      color: $blue;
+    }
+  }
+
+  a.current {
+    color: pink;
+  }
+
+  li {
+    text-transform: uppercase;
+    display: inline;
+    padding: 1em;
+    line-height: 1.5em;
+    color: $gray;
+
+    @include mobile {
+      padding: 0;
     }
   }
 }
 
-.nav-links li {
-  text-transform: uppercase;
-  display: inline;
-  padding: 1em;
-  text-align: center;
-  font-size: 13px;
-  line-height: 1.5em;
-}
-
-//
-// .main
-//
 
 .posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+  margin-bottom: 2em;
+}
+
+.post > div {
+  margin-bottom: 1.5em;
 }
 
 .posts > .post:last-child {
-  padding-bottom: 1em;
+  margin-bottom: 1em;
   border-bottom: none;
+}
+
+.post-header {
+  text-align: center;
 }
 
 .post {
@@ -282,19 +296,23 @@ nav {
   .read-more {
     text-transform: uppercase;
     font-size: 15px;
+    text-align: center;
   }
 }
 
 .wrapper-footer {
-  margin-top: 50px;
+  margin-top: 3em;
   border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
 }
 
 footer {
   padding: 20px 0;
   text-align: center;
+}
+
+.copyright {
+  font-size: 0.5em;
+  margin-top: 10px;
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS

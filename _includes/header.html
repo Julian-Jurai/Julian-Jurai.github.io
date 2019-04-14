@@ -1,0 +1,29 @@
+<div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      <div class="site-info">
+        <h1 class="site-name">
+          <a href="{{ site.baseurl }}/">{{ site.name }}</a>
+        </h1>
+      </div>
+      <div id="navBlock" role="navigation">
+        <nav>
+          <ul>
+            <li {% if page.url == "/" %}class="current" {% endif %}>
+              <a href="{{ site.baseurl }}/">Home</a>
+            </li>
+            <li {% if page.url == "/contact" %}class="current" {% endif %}>
+              <a href="{{ site.baseurl }}/contacts">Contact</a>
+            </li>
+            <li {% if page.url == "/about" %}class="current" {% endif %}>
+              <a href="{{ site.baseurl }}/about">About</a>
+            </li>
+            <li {% if page.url == "/archive" %}class="current" {% endif %}>
+              <a href="{{ site.baseurl }}/archive">Archive</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+</div>

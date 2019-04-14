@@ -8,10 +8,6 @@
 
     {% include meta.html %}
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
     <link
       rel="stylesheet"
       type="text/css"
@@ -23,50 +19,17 @@
       title="{{ site.name }} - {{ site.description }}"
       href="{{ site.baseurl }}/feed.xml"
     />
-
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
   <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <div class="site-info">
-            <h1 class="site-name">
-              <a href="{{ site.baseurl }}/">{{ site.name }}</a>
-            </h1>
-          </div>
-          <div id="navBlock" role="navigation">
-            <nav>
-              <ul class="nav-links">
-                <li>
-                  <a href="{{ site.baseurl }}/">Home</a>
-                </li>
-                <li>
-                  <a href="{{ site.baseurl }}/">Contact</a>
-                </li>
-                <li>
-                  <a href="{{ site.baseurl }}/about">About</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </header>
+    <div>
+      {% include header.html %}
+
+      <div id="main" role="main" class="container">
+        {{ content }}
       </div>
-    </div>
 
-    <div id="main" role="main" class="container">
-      {{ content }}
+      {% include footer.html %} {% include analytics.html %}
     </div>
-
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
-
-    {% include analytics.html %}
   </body>
 </html>
