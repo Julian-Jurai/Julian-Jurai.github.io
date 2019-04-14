@@ -277,28 +277,17 @@ label {
 }
 
 nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-top: 23px;
   font-family: $helvetica;
   font-size: 0.75em;
   text-align: center;
 
-  @include mobile {
-    float: none;
-    margin-top: 9px;
-    display: block;
-  }
-
   a {
     color: $gray;
     font-weight: 400;
-
-    @include mobile {
-      margin: 0 10px;
-    }
-  }
-
-  a.current {
-    color: pink;
   }
 
   li {
@@ -309,8 +298,12 @@ nav {
     color: $gray;
 
     @include mobile {
-      padding: 0;
+      padding: 10px;
     }
+  }
+
+  li.current a {
+    color: $lighterGray;
   }
 }
 
