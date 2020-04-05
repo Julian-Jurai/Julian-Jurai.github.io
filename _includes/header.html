@@ -9,18 +9,18 @@
       <div id="navBlock" role="navigation">
         <nav>
           <ul>
+            <li {% if page.url == "/about/" %} class="current"{% endif %}>
+              <a href="{{ site.baseurl }}/about/">About</a>
+            </li>
             <li {% if page.url == "/" %} class="current"{% endif %}>
               <a href="{{ site.baseurl }}/">Home</a>
             </li>
             <li {% if page.url == "/contact/" %} class="current"{% endif %}>
               <a href="{{ site.baseurl }}/contact/">Contact</a>
             </li>
-            <li {% if page.url == "/about/" %} class="current"{% endif %}>
-              <a href="{{ site.baseurl }}/about/">About</a>
-            </li>
-            <li {% if page.url == "/archive/" %} class="current"{% endif %}>
+            <!-- <li {% if page.url == "/archive/" %} class="current"{% endif %}>
               <a href="{{ site.baseurl }}/archive/">Archive</a>
-            </li>
+            </li> -->
           </ul>
         </nav>
       </div>

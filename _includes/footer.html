@@ -3,8 +3,11 @@
     <footer class="footer">
       {% include svg-icons.html %}
       <div class="copyright">
-        Copyright <b>© Julian Jurai &middot; 2019 </b>
+        Copyright <b>© Julian Jurai &middot; <span id="cp-year">2019</span> </b>
       </div>
+      <script>
+        document.getElementById("cp-year").innerText = new Date().getFullYear();
+      </script>
     </footer>
   </div>
 </div>

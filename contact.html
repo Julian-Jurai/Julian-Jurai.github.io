@@ -26,7 +26,7 @@ title: Have a question or just want to chat?
     <div>
       <textarea
         name="message"
-        placeholder="You like the internet, I like the internet. Lets grab a coffee!"
+        placeholder="Hello darkness my old friend..."
         rows="6"
         required
       ></textarea>
@@ -38,10 +38,10 @@ title: Have a question or just want to chat?
     var metaDataValue = {};
     metaDataValue.siteLocation = window.location.href;
     fetch("https://ipapi.co/json/")
-      .then(function(response) {
+      .then(function (response) {
         return response.json();
       })
-      .then(function(jsonPayload) {
+      .then(function (jsonPayload) {
         metaDataValue.metadata = jsonPayload;
         document.getElementById("metadata").value = JSON.stringify(
           metaDataValue
@@ -49,6 +49,6 @@ title: Have a question or just want to chat?
         console.log(JSON.stringify(metaDataValue));
         console.log("0");
       })
-      .catch(function(err) {});
+      .catch(function (err) {});
   </script>
 </div>
